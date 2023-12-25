@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+            border: 2px solid black;
+        }
+        input {
+            width: 250px;
+            height: 30px;
+        }
+        button {
+            padding: 10px 50px 10px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/get_temperature" method="GET">
+            <h2>Weather 2023</h2>
+            <input type="text" name="city" id="city" placeholder="Enter City">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

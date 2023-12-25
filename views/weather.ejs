@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 20px;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <% if(temperature<20){ %>
+    <style>
+        *{
+            background-color: #28BCEF;
+        }
+    </style>
+    <% } else { %>
+    <style>
+        *{
+            background-color: #EFEF28;
+        }
+    </style>
+    <% } %>
+
+    <div class="wrapper">
+        <h2>It's <u><%= temperature %>&deg;C</u> in <%= cityName %>! </h2>
+        <h2>Wind Speed is <u><%= wind %> mph</u>.</h2>
+        <h2>And Humidity is <u><%= humidity %>%</u>.</h2>
+    </div>
+</body>
+</html>
